@@ -1,11 +1,10 @@
 import React from 'react'
+import HomeHero from './HomeHero'
 
 export default function page() {
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>
-        Hello world!
-      </h1>
+    <div className=' bg-black/30 text-white '>
+      <HomeHero />
     </div>
   )
 }
