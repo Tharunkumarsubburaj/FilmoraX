@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Search } from "lucide-react";
 import { useState } from "react";
+import SignInButton from "./SignInButton";
 
 export default function Header() {
   const pathName = usePathname();
@@ -64,9 +65,7 @@ export default function Header() {
             />
           </div>
 
-          <button className="px-4 py-2 bg-LimeGreen/80 text-ForestGreen rounded-lg hover:bg-LimeGreen transition-colors duration-300">
-            Sign In
-          </button>
+          <SignInButton />
         </div>
 
         <div className="lg:hidden text-white p-2 rounded-md flex hover:bg-white/10 transition">

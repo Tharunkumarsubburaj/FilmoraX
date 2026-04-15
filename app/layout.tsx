@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
+import LayoutWrapper from "@/components/client/LayoutWrapper";
+import StoreProvider from "@/store/StoreProvider";
 
 export const metadata: Metadata = {
   title: "FilmoraX",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <StoreProvider>
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </StoreProvider>
       </body>
     </html>
   );
